@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <div class="container">
+            <p2>
+                <img aria-hidden="true" src="https://cdn.discordapp.com/attachments/748356359501643797/763616417421197342/sbk_cholesterol.ico" width="100" height="100" alt="logo">
+                <h1>sbk.cholesterol's playground</h1>
+            </p2>
+        </div>
+    </header>
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>discord.js basics - sbk.cholesterol's playground</title>
+        <link rel="icon" type="image" href="https://cdn.discordapp.com/attachments/748356359501643797/763616417421197342/sbk_cholesterol.ico">
+        <style>
+                        header{
+                background-color: cyan;
+                text-align: left;
+            }
+            
+            body{
+                background-color: honeydew;
+            }
+
+            footer{
+                background-color: cyan;
+                text-align: center;
+                width: auto;
+                height: 5cm;
+            }
+
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 100%;
+            }
+
+
+            h1{
+                text-align: center;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 200%;
+            }
+
+            .whatuneed{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            p1{
+                font-size: 150%;
+            }
+
+            h2 {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            b{
+                color: blue;
+            }
+
+        </style>
+        </head>
+        <body>
+            <section>
+                <div class="whatuneed">
+                    <h1>discord.js basics</h1>
+                    <h2>Getting things ready</h2>
+                    <p1>What you need: </p1>
+                    <p>- <a href="https://nodejs.org">NodeJS</a> <var>Note: The latest version is V14.13.1, but you are recommended to download the V12.19.0 one.</var></p>
+                    <p>- A text editor e.g. <a href="http://code.visualstudio.com/">Visual Studio Code</a>, <a href="https://atom.io">Atom</a>. <strong>Do not use Notepad to edit the file!</strong></p>
+                    <p>- 64-bit system.</p>
+                </div>
+                <div class="basic">
+                    <h2>Get ready to code</h2>
+                    <p><strong>You are strongly recommended to learn JavaScript basics. It would be confusing for you if you know nothing about JavaScript.</strong></p>
+                    <p>1. Create an empty folder in your computer</p>
+                    <p>2. Start your code editor</p>
+                    <p>3. Open the empty folder you created before.</p>
+                    <p>4. Create a [YOUR_FILE_NAME].js file <strong>MUST BE A .js FILE!</strong></p>
+                    <p>5. Start a terminal, type <b><var>npm install discord.js</var></b> and hit enter</p>
+                    <p>6. Type <b><var>npm init -y </var></b>and hit enter</p>
+                </div>
+                <div class="client">
+                    <h1>Coding</h1>
+                    <h2><strong>Creating a client</strong></h2>
+                    <p>Type the following code:</p>
+                    <p><embed type="text/html" src="client.html" width="500px" height="130px"></p>
+                    <p>There you go! You just created your Discord bot client. In case you don't know how to obtain a Discord bot token and to invite it                                                    , click <a href="https://www.writebots.com/discord-bot-token/">here.</a></p>
+                    <p>That pile of code looks confusing, right? Nevermind, here is the explanation:</p>
+                    <p><b><var>const</var></b> is just JavaScript basics. It is used for declaring variables, and it cannot be changed backwards.</p>
+                    <p><b><var>const Discord = require('discord.js')</var></b> stands for the <strong>Discord</strong> variable's function is imported from the npm package discord.js.</p>
+                    <p><b><var>const client = new Discord.Client</var></b> Discord.Client is a function that creates the bot client.</p>
+                    <p>The <strong>token</strong> variable is to declare the bot's token. <i><strong>REMEMBER TO KEEP IT CONFIDENCIAL ALL THE TIME!!!</strong></i></p>
+                    <p>The <strong>prefix</strong> variable is to declare the bot's prefix. Bot commands need a prefix to execute them.</p>
+                </div>
+                <div class="body">
+                    <h2>Making the bot respond to messages</h2>
+                    <p>At the previous part, we have gone through the client. Now let's make the bot to respond to messages!</p>
+                    <p>Type the following code: </p>
+                    <p><embed type="text/html" src="respond.html" width="500px" height="130px"></p>
+                    <p>Ok, that is the code.</p>
+                    <p><b><var>client.on</var></b> is a discord.js function, which every command of discord.js would not work if you don't add this code.</p>
+                    <p>Then, we have a callback of the message function and we are making an <strong>if.</strong>These are JavaScript basics, and if the message content the user sends <b>!ping</b> it would respond with a <b>Pong!</b>.(Note: The prefix is <i>!</i>)</p>
+                    <p>The next line of code, is to let the bot send a message to the channel which has <b>!ping</b>. The <i>message.channel.send</i> function does it. Remember to use a string to include your message or the console would say it's not defined.</p>
+                </div>
+                <div class="login">
+                    <h2>Logging the bot in</h2>
+                    <p>Type the following code:</p>
+                    <embed type="text/html" src="login.html" width="500px" height="130px">
+                    <p>This is the last part! This code is to establish a websocket to Discord and makes the bot online.</p>
+                </div>
+            </section>
+            <section>
+                <h2>Hosting your bot online</h2>
+                <p>Start a terminal, type <i><strong>node [YOUR_FILE_NAME].js</strong></i> and hit enter.</p>
+                <P>Go to the server which you have invited your bot, and see if it's running.</P>
+                <h2>Congratulations! You have built your Discord bot and made it online! Next, try <strong>!ping</strong> and see if it gives a response. </h2>
+            </section>
+            <section>
+                <h1>Facing problems or errors?</h1>
+                <h2>Are you facing any errors or problems? Click <a href="https://discord.gg/5WFypzn">here</a> to join my Discord server for support!</h2>         </section>
+            <footer>
+                <div class="foot">
+                    <div class="About">
+                        <p>About</p>
+                        <div class="home">
+                           <p><a href="https://sbk-cholesterol.cf">Home</a></p>
+                       </div>
+                        <div class="discord">
+                            <p><a href="https://sbk-cholesterol.cf/discord">Discord</a></p>
+                        </div>
+                        <div class="discord.js">
+                            <p><a href="https://sbk-cholesterol.cf/discord-js-basics">discord.js basics</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>        
+        </body>
+</html>
