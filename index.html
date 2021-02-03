@@ -1,145 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home - sbk.cholesterol's playground</title>
-        <link rel="icon" type="image" href="https://cdn.discordapp.com/attachments/748356359501643797/763616417421197342/sbk_cholesterol.ico">
-        <style>
-        p {
-            color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 150%;
-        }
-
-        h2 {
-            color: black; 
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 100; 
+  <meta charset="utf-8" />
+  <title style="font-size: 40px;">surviv.io latency tester | sbk.cholesterol</title>
+  <head>
+    <link rel="icon", type="image", href="suroi.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap" rel="stylesheet">
+      <style>
+          body {
+              background-color: #80AF49;
+              font-family:'Roboto Condensed', sans-serif;
+          }
+          h2 {
             text-align: center;
-        }
-
-        h1{
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-
-        body{
-            background-color:honeydew;
-        }
-
-        section{
-            background-color:honeydew;
-            text-align: justify;
-        }
-
-        header{
-            background-color:gainsboro;
-        }
-
-        b{
-            color: blue;
-        }
-
-        .invite{
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            height: 2cm;
-            width: 3cm;
-            background-color: yellow;
-            border: yellow;
-            text-align: center;
-        }
-
-        .github{
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            height: 2cm;
+            font-size: 40px;
+            font-family: 'Jura', sans-serif;;
+          }
+          select {
+            font-family: 'Roboto Condensed', sans-serif;
+              background-color: #80AF49;
+              font-size: 20px;
+              border: #80AF49;
+          }
+          input {
+            background-color: #80AF49; /* Green */
+            border: #80AF49;
             color: white;
-            width: 3cm;
-            background-color:blue;
-            border: blue; 
+            padding: 15px 32px;
             text-align: center;
-        }
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: 'Roboto Condensed', sans-serif;;
+          }
+          input:active {
+              border: #80AF49;
+            vertical-align: top;
+            padding: 15px 32px;
+            font-family: 'Roboto Condensed', sans-serif;
+          }
+      </style>
+  </head>
+  <script language="javascript" type="text/javascript">
 
-        .container{
-            background-color: cyan;
-        }
+  var wsUri = 
+	  "wss://as-sgp-p1.surviv.io/ptc";
 
-        .text-image{
-            text-align: center;
-        }
+  function init()
+  {
 
-        .foot{
-            background-color: cyan;
-            width: auto;
-            height: 5cm;
-            
-        }
-
-        .About {
-            text-align: center;
-            color: cyan;
-
-        }
-
-        .coding {
-            text-align: center;
-            color: cyan;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            
-        }
-
-        p0{
-            text-align: left;
-        }
+    var zz=document.getElementById("sel");
+    zz.onchange = function()  { 
+    	wsUri="wss://"+ zz.value.substr(0,2) +"-" + zz.value.substr(3,3)+"-p1.surviv.io/ptc";
+    	document.getElementById("output").innerHTML="";
+    	init2();
+    };
+    zz.nextElementSibling.onclick
+    
+     = function()  { 
+    	wsUri="wss://"+ zz.value.substr(0,2) +"-" + zz.value.substr(3,3)+"-p1.surviv.io/ptc";
+    	document.getElementById("output").innerHTML="";
+    	init2();
+    };
 
 
-        </style>
-    </head>
-<body>
-    <header>
-        <div class="container">
-            <p0><img src="https://cdn.discordapp.com/attachments/748356359501643797/763616417421197342/sbk_cholesterol.ico" width="100" height="100" alt="logo"></p0>
-            <h1>Hey visitors! Welcome to sbk.cholesterol's playground!<h1>
-        </div>
-    </header>
-    <div class="text-image">
-        <p><a href="https://sbk-cholesterol.cf"><img src="https://cdn.discordapp.com/attachments/748356359501643797/763406245620350976/sbk_cholesterol.png" width="400" height="400" alt="sbk.cholesterol"></a></p>
-    </div>
-    <section>
-    <h2>Who am I?</h2>
-    <p>Who am I? I like playing video games and writing computer code. I have made some projects these times (Scroll down).</p>   
- </section>
- <section>
-     <h1>Things I have been doing these times</h1>
-     <p>I have started to make a Discord bot since July 2020, and now it is almost done! It is called Jupiter with the tag #9145. I have also been starting working on this website since 7th October.</p>
- </section>
- <h1>Projects</h1>
- <section>
-     <h2>About Jupiter</h2>
-     <p>Jupiter is a mulit-purpose Discord bot which has some basic commands like <b>serverinfo</b>,<b>userinfo</b>. It also has a <b>meme</b> command.</p>
-     <a href="https://discord.com/api/oauth2/authorize?client_id=747849388663111682&permissions=8&scope=bot">
-    <button type="button" class="invite">Invite</button></a>
-    <a href="https://github.com/sbk-cholesterol/jupiter-9145">
-    <button type="button" class="github">GitHub Repo</button></a>
- </section>
- <section>
-     <h1>About this website</h1>
-     <p>I have being working on this website since 7th October. It is against DDoS attacks and has a valid SSL certificate, by <a href="https://www.cloudflare.com/">CloudFlare</a>. Remember to add <b>https://</b> before or it would be unsecure. I code this site mainly using HTML and CSS.</p>
- </section>
- <footer>
-     <div class="foot">
-         <div class="About">
-             <p>About</p>
-             <div class="home">
-                <p><a href="https://sbk-cholesterol.cf">Home</a></p>
-            </div>
-             <div class="discord">
-                 <p><a href="https://sbk-cholesterol.cf/discord">Discord</a></p>
-             </div>
-             <div class="discord.js">
-                <p><a href="https://sbk-cholesterol.cf/discord-js-basics">discord.js basics</a></p>
-            </div>
-         </div>
-     </div>
- </footer>
-</body>
-</html>
+  	init2();
+  }
+  function init2() {
+	var output;
+	var tPing,sendTime;
+	var ST={},RT={},st=0,rt=0;
+	var maxRt=15;
+	var sump=0,sumpp=0,minp,maxp=0;
+	output = document.getElementById("output");
+	var websocket;
+	var uri=wsUri;
+	testWebSocket();
+
+
+  function testWebSocket()
+  {
+    sendTime = Date.now();
+    websocket = new WebSocket(uri);
+    writeToScreen('<span style="color: blue;text-align: center;">TRYING to connect to: </span>' + uri);
+    websocket.onopen = function(evt) { onOpen(evt) };
+    websocket.onclose = function(evt) { onClose(evt) };
+    websocket.onmessage = function(evt) { onMessage(evt) };
+    websocket.onerror = function(evt) { onError(evt) };
+  }
+
+  function onOpen(evt)
+  {
+    tPing = (Date.now() - sendTime) ;
+    writeToScreen('<span style="color: blue;">CONNECTED openp: ' + tPing+'</span>');
+    console.log(evt);
+    doSend(new ArrayBuffer(1) );
+  }
+
+  function onClose(evt)
+  {
+    writeToScreen("DISCONNECTED");
+  }
+
+  function onMessage(evt)
+  {
+  	RT[rt]= Date.now();
+    var tPing = RT[rt]-ST[rt];
+
+    if(tPing >maxp) maxp=tPing;
+    if(!minp || tPing<minp) minp=tPing;
+    sump+=tPing;
+    sumpp+=tPing*tPing;
+
+    writeToScreen('<span style="color: red;">Latency: ' + tPing+' ms</span>');
+
+    rt+=1;
+    if(rt==maxRt) {
+    writeToScreen('<span style="color: blue">closed</span>');
+    var stddev= Math.sqrt(sumpp/rt - sump*sump/rt/rt);
+    writeToScreen('min=' + minp + ' max=' + maxp +' avg=' + (sump/rt).toFixed(1) +' stddev='+stddev.toFixed(1)+ ' < < < < ' + uri);
+    websocket.close();
+    }
+  }
+
+  function onError(evt)
+  {
+    writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
+  }
+
+  function doSend(message)
+  {
+    ST[st++] = Date.now();
+    websocket.send(message);
+
+    if(st<maxRt) {
+    	setTimeout(doSend,33);
+    }
+  }
+
+  function writeToScreen(message)
+  {
+    var pre = document.createElement("p");
+    pre.style.wordWrap = "break-word";
+    pre.innerHTML = message;
+    output.appendChild(pre);
+  }
+
+  }// end init2
+
+  window.addEventListener("load", init, false);
+
+  </script>
+
+  <h2>WebSocket Test</h2>
+  <select id="sel">
+  <option>as.sgp</option><option>as.vnm</option>
+  <option>eu.fra</option><option>eu.waw</option><option>kr.sel</option>
+  <option>na.chi</option><option>na.mia</option><option>na.nyc</option><option>na.sfo</option>
+  <option>sa.sao</option>
+  </select>
+  
+  <input type=button value="ping again">
+
+  <div id="output"></div>
